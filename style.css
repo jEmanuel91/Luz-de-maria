@@ -1,0 +1,167 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background: #003366;
+  color: white;
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.perfil-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.sobre-mim {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sobre-mim h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sobre-mim p {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Cards */
+.container-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #2c2c2c;
+  color: white;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  background: #3a3a3a;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 15px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #004080;
+}
+
+.card-content {
+  display: none;
+  background: white;
+  color: #333;
+  padding: 15px;
+  text-align: left;
+}
+
+.card-content article {
+  margin-bottom: 20px;
+}
+
+.card-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #003366;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+  text-align: center;
+}
+/* Layout padrão (PC) já está aí no seu código */
+
+/* Ajustes para telas menores (celulares) */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .perfil-img {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+  }
+
+  .container-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .card-content img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* Extra pequeno (celulares bem pequenos, até 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+}
