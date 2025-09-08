@@ -1,13 +1,28 @@
+/* Variáveis */
+:root {
+  --primary-color: #003366;
+  --secondary-color: #004080;
+  --card-bg: #2c2c2c;
+  --card-hover: #3a3a3a;
+  --text-color: #fff;
+  --text-dark: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
   background: #f8f9fa;
-  color: #333;
+  color: var(--text-dark);
 }
 
 header {
-  background: #003366;
-  color: white;
+  background: var(--primary-color);
+  color: var(--text-color);
   padding: 20px;
 }
 
@@ -15,22 +30,32 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
-/* Foto de apresentação com efeito */
+.apresentacao h1 {
+  font-size: 2rem;
+}
+
+/* Efeito de zoom contínuo na imagem de apresentação */
 .perfil-img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  animation: zoom 10s infinite alternate;
+  transition: transform 0.3s ease;
 }
 
 .perfil-img:hover {
-  transform: scale(1.1); /* leve zoom */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* sombra elegante */
-  border: 3px solid #004080; /* muda a borda */
+  transform: scale(1.3);
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 .sobre-mim {
@@ -41,105 +66,77 @@ header {
 }
 
 .sobre-mim h2 {
-  margin: 0;
   font-size: 1.2rem;
 }
 
 .sobre-mim p {
-  margin: 5px 0 0;
+  margin-top: 5px;
   font-size: 0.95rem;
   line-height: 1.4;
 }
 
 /* Cards */
 .container-cards {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 40px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* diminuiu os cards */
+  gap: 15px; /* menor espaçamento */
+  padding: 30px;
 }
 
 .card {
-  background: #2c2c2c;
-  color: white;
-  width: 420px;
+  background: var(--card-bg);
+  color: var(--text-color);
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* sombra menor */
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.03);
-  background: #3a3a3a;
+  transform: scale(1.02);
+  background: var(--card-hover);
 }
 
 .card h2 {
   margin: 0;
-  padding: 18px;
-  font-size: 1.5rem;
+  padding: 12px; /* padding menor */
+  font-size: 1.2rem; /* fonte menor */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #004080;
+  background: var(--secondary-color);
 }
 
 .card-content {
   display: none;
   background: white;
-  color: #333;
-  padding: 20px;
+  color: var(--text-dark);
+  padding: 12px; /* padding menor */
   text-align: left;
 }
 
 .card-content article {
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* menor espaçamento */
 }
 
-/* Imagens dos cards menores com efeito de zoom */
-.card img {
+.card-content img {
   width: 100%;
-  max-height: 180px;
-  border-radius: 50%;
+  border-radius: 8px;
+  margin-bottom: 8px;
   object-fit: cover;
-  transition: transform 0.3s ease, border-radius 0.3s ease;
 }
 
-.card:hover img,
-.card.touch img {
-  transform: scale(1.1);
-  border-radius: 10%;
-}
-
+/* Footer */
 footer {
-  background: #003366;
-  color: white;
+  background: var(--primary-color);
+  color: var(--text-color);
   padding: 15px;
-  margin-top: 30px;
   text-align: center;
 }
 
-/* Ajustes para tablets e telas menores */
-@media (max-width: 1024px) {
-  .container-cards {
-    gap: 20px;
-    padding: 30px;
-  }
-
-  .card {
-    width: 360px;
-  }
-
-  .card h2 {
-    font-size: 1.3rem;
-    padding: 15px;
-  }
-}
-
-/* Ajustes para celulares */
+/* Responsividade */
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
@@ -149,44 +146,17 @@ footer {
   .perfil-img {
     width: 100px;
     height: 100px;
+    margin-top: 10px;
   }
 
   .container-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
     padding: 15px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .card h2 {
-    font-size: 1.2rem;
-    padding: 12px;
-  }
-
-  .card-content img {
-    max-height: 150px;
-    object-fit: cover;
-  }
-
-  footer {
-    font-size: 0.9rem;
-    padding: 10px;
   }
 }
 
-/* Celulares bem pequenos */
 @media (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
-  }
-
-  header p {
-    font-size: 0.9rem;
   }
 
   .card h2 {
