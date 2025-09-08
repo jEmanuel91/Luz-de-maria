@@ -17,12 +17,20 @@ header {
   justify-content: space-between;
 }
 
+/* Foto de apresentação com efeito */
 .perfil-img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.perfil-img:hover {
+  transform: scale(1.1); /* leve zoom */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* sombra elegante */
+  border: 3px solid #004080; /* muda a borda */
 }
 
 .sobre-mim {
@@ -47,31 +55,31 @@ header {
 .container-cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 30px;
+  gap: 25px;
+  padding: 40px;
   flex-wrap: wrap;
 }
 
 .card {
   background: #2c2c2c;
   color: white;
-  width: 350px;
+  width: 420px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
   background: #3a3a3a;
 }
 
 .card h2 {
   margin: 0;
-  padding: 15px;
-  font-size: 1.4rem;
+  padding: 18px;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +91,7 @@ header {
   display: none;
   background: white;
   color: #333;
-  padding: 15px;
+  padding: 20px;
   text-align: left;
 }
 
@@ -91,10 +99,19 @@ header {
   margin-bottom: 20px;
 }
 
-.card-content img {
+/* Imagens dos cards menores com efeito de zoom */
+.card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  max-height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, border-radius 0.3s ease;
+}
+
+.card:hover img,
+.card.touch img {
+  transform: scale(1.1);
+  border-radius: 10%;
 }
 
 footer {
@@ -104,9 +121,25 @@ footer {
   margin-top: 30px;
   text-align: center;
 }
-/* Layout padrão (PC) já está aí no seu código */
 
-/* Ajustes para telas menores (celulares) */
+/* Ajustes para tablets e telas menores */
+@media (max-width: 1024px) {
+  .container-cards {
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .card {
+    width: 360px;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+    padding: 15px;
+  }
+}
+
+/* Ajustes para celulares */
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
@@ -116,7 +149,6 @@ footer {
   .perfil-img {
     width: 100px;
     height: 100px;
-    margin-top: 10px;
   }
 
   .container-cards {
@@ -128,16 +160,16 @@ footer {
 
   .card {
     width: 100%;
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .card h2 {
     font-size: 1.2rem;
-    padding: 10px;
+    padding: 12px;
   }
 
   .card-content img {
-    max-height: 200px;
+    max-height: 150px;
     object-fit: cover;
   }
 
@@ -147,7 +179,7 @@ footer {
   }
 }
 
-/* Extra pequeno (celulares bem pequenos, até 480px) */
+/* Celulares bem pequenos */
 @media (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
