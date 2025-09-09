@@ -1,16 +1,27 @@
-const cards = document.querySelectorAll('.card');
+document.addEventListener("DOMContentLoaded", () => {
+  const botoes = document.querySelectorAll(".btn-saiba");
 
-cards.forEach(card => {
-  const cardHeader = card.querySelector('h2');
-  const cardContent = card.querySelector('.card-content');
+  botoes.forEach((botao) => {
+    botao.addEventListener("click", () => {
+      const historia = botao.nextElementSibling;
 
-  cardHeader.addEventListener('click', () => {
-    // Fecha todos os outros cards
-    cards.forEach(c => {
-      if(c !== card) c.querySelector('.card-content').style.display = 'none';
+      // Fecha todas as outras antes de abrir a clicada
+      document.querySelectorAll(".historia.ativo").forEach((outra) => {
+        if (outra !== historia) {
+          outra.classList.remove("ativo");
+          outra.previousElementSibling.textContent = "Saiba Mais";
+        }
+      });
+
+      // Alterna a história clicada
+      historia.classList.toggle("ativo");
+
+      // Troca texto do botão
+      if (historia.classList.contains("ativo")) {
+        botao.textContent = "Fechar";
+      } else {
+        botao.textContent = "Saiba Mais";
+      }
     });
-
-    // Alterna o conteúdo do card clicado
-    cardContent.style.display = cardContent.style.display === 'block' ? 'none' : 'block';
   });
 });

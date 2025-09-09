@@ -1,4 +1,3 @@
-/* Variáveis */
 :root {
   --primary-color: #003366;
   --secondary-color: #004080;
@@ -6,8 +5,10 @@
   --card-hover: #3a3a3a;
   --text-color: #fff;
   --text-dark: #333;
+  --transition-speed: 0.3s;
 }
 
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -18,34 +19,46 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f8f9fa;
   color: var(--text-dark);
+  line-height: 1.5;
 }
 
+/* HEADER */
 header {
   background: var(--primary-color);
   color: var(--text-color);
   padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 15px;
 }
 
 .header-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
 }
 
-.apresentacao h1 {
-  font-size: 2rem;
+.sobre-mim {
+  background: rgba(255,255,255,0.1);
+  padding: 12px 15px;
+  border-radius: 8px;
+  max-width: 600px;
 }
 
-/* Efeito de zoom contínuo na imagem de apresentação */
 .perfil-img {
-  width: 120px;
-  height: 120px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid white;
   animation: zoom 10s infinite alternate;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .perfil-img:hover {
@@ -58,28 +71,11 @@ header {
   100% { transform: scale(1); }
 }
 
-.sobre-mim {
-  margin-top: 10px;
-  background: rgba(255,255,255,0.1);
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.sobre-mim h2 {
-  font-size: 1.2rem;
-}
-
-.sobre-mim p {
-  margin-top: 5px;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-/* Cards */
+/* CARDS */
 .container-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* diminuiu os cards */
-  gap: 15px; /* menor espaçamento */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
   padding: 30px;
 }
 
@@ -87,83 +83,103 @@ header {
   background: var(--card-bg);
   color: var(--text-color);
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* sombra menor */
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform var(--transition-speed), background var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px) scale(1.02);
   background: var(--card-hover);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
 }
 
 .card h2 {
   margin: 0;
-  padding: 12px; /* padding menor */
-  font-size: 1.2rem; /* fonte menor */
+  padding: 12px;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   background: var(--secondary-color);
+  justify-content: center;
 }
 
 .card-content {
-  display: none;
-  background: white;
+  background: #fff;
   color: var(--text-dark);
-  padding: 12px; /* padding menor */
-  text-align: left;
+  padding: 14px;
 }
 
 .card-content article {
-  margin-bottom: 15px; /* menor espaçamento */
+  margin-bottom: 15px;
 }
 
 .card-content img {
   width: 100%;
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   object-fit: cover;
+  transition: transform var(--transition-speed);
 }
 
-/* Footer */
+.card-content img:hover {
+  transform: scale(1.05);
+}
+
+/* BOTÃO SAIBA MAIS */
+.btn-saiba {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: bold;
+  transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+.btn-saiba:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* HISTÓRIA (escondida de início) */
+.historia {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.historia.ativo {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* FOOTER */
 footer {
   background: var(--primary-color);
   color: var(--text-color);
   padding: 15px;
   text-align: center;
+  font-size: 0.9rem;
 }
 
-/* Responsividade */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    text-align: center;
+  header h1 {
+    font-size: 2rem;
   }
 
   .perfil-img {
     width: 100px;
     height: 100px;
-    margin-top: 10px;
   }
 
   .container-cards {
+    grid-template-columns: 1fr;
     padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .card h2 {
-    font-size: 1rem;
-  }
-
-  .card-content {
-    padding: 10px;
   }
 }
