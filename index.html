@@ -9,141 +9,205 @@
 </head>
 <body>
 
-<header>
-  <h1>Corações para Maria</h1>
-  <div class="header-content">
-    <div class="sobre-mim">
-      <h2>👋 Eu sou João Emanuel</h2>
-      <p>Filho de Maria, católico praticante e apaixonado pela fé! Desde pequeno, os santos e Nossa Senhora me inspiraram, e tento seguir seus exemplos com alegria e devoção.</p>
+  <header>
+    <div class="header-content" aria-label="Sobre mim">
+      <h1>Corações para Maria</h1>
+      <section class="sobre-mim">
+        <h2>👋 Eu sou João Emanuel</h2>
+        <p>Filho de Maria, católico praticante e apaixonado pela fé! Desde pequeno, os santos e Nossa Senhora me inspiraram, e tento seguir seus exemplos com alegria e devoção.</p>
+      </section>
+      <img src="minha.imagem.jpeg.jpeg" alt="Foto de João Emanuel sorrindo, usando camisa clara" class="perfil-img">
     </div>
-    <img src="minha.imagem.jpeg.jpeg" alt="Foto de João Emanuel" class="perfil-img">
-  </div>
-</header>
+  </header>
+
+  <main>
+    <section class="container-cards">
+      <!-- CARD APARIÇÕES -->
+      <section class="card" aria-label="Aparições de Maria">
+        <h2><i class="fas fa-praying-hands" aria-hidden="true"></i> Aparições</h2>
+        <ul class="card-content">
+          <li>
+            <article>
+              <img src="https://pbs.twimg.com/media/E59jPSuXoAIdxNl?format=jpg&name=4096x4096" alt="Imagem de Nossa Senhora do Carmo">
+              <h3>Nossa Senhora do Carmo</h3>
+              <p>Maria entregou o escapulário como sinal de proteção espiritual.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Maria apareceu como Nossa Senhora do Carmo, celebrada com devoção em várias partes do mundo.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://www.sitecatolico.com.br/wp-content/uploads/2021/05/nossa_senhora_fatima-204014.jpeg" alt="Imagem de Nossa Senhora de Fátima">
+              <h3>Fátima (1917 - Portugal)</h3>
+              <p>Chamou o mundo à conversão, oração e penitência.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Nossa Senhora apareceu a três pastorinhos em Fátima, pedindo oração, penitência e paz.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="http://1.bp.blogspot.com/-AP092mNintY/VNgDJZT4jqI/AAAAAAABpEc/hAozYPuj600/s1600/Lourdes.jpg" alt="Imagem de Nossa Senhora de Lourdes">
+              <h3>Lourdes (1858 - França)</h3>
+              <p>Revelou uma fonte milagrosa a Santa Bernadette.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Maria apareceu a Santa Bernadette, revelando uma fonte de água milagrosa.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://www.miliciadaimaculada.org.br/source/files/c/16641/nossa-senhora-do-bom-conselho.jpg" alt="Imagem de Nossa Senhora do Bom Conselho">
+              <h3>Nossa Senhora do Bom Conselho (Século XV - Albânia)</h3>
+              <p>Um ícone mariano foi milagrosamente levado a Genazzano.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">A devoção surgiu no século XV, quando um ícone mariano foi milagrosamente transportado para Genazzano, na Itália.</div>
+            </article>
+          </li>
+          <!-- Novas Aparições -->
+          <li>
+            <article>
+              <img src="https://tse1.mm.bing.net/th/id/OIP.8iKo5_cHU3T3hNmM8Q4B6QHaEK?pid=Api&P=0&h=180" alt="Imagem de Nossa Senhora de Guadalupe">
+              <h3>Guadalupe (1531 - México)</h3>
+              <p>Deixou sua imagem impressa na tilma de Juan Diego.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Maria apareceu a São Juan Diego no México, deixando sua imagem milagrosa impressa na tilma.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://tse1.mm.bing.net/th/id/OIP.-tHk-7O56HrPFvJpx1ulfwHaEc?pid=Api&P=0&h=180" alt="Imagem de Nossa Senhora Aparecida">
+              <h3>Aparecida (1717 - Brasil)</h3>
+              <p>A imagem encontrada tornou-se padroeira do Brasil.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">A imagem foi encontrada por pescadores no Rio Paraíba e tornou-se padroeira do Brasil.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://i.pinimg.com/originals/04/d4/e0/04d4e09e4514ba4c36583e253a7608b6.jpg" alt="Imagem de Nossa Senhora de La Salette">
+              <h3>La Salette (1846 - França)</h3>
+              <p>Pediu reconciliação, oração e penitência.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Maria apareceu a dois pastorinhos, pedindo conversão, oração e reconciliação com Deus.</div>
+            </article>
+            <li>
+           <article>
+             <img src="https://i.pinimg.com/736x/2c/f1/54/2cf15493f2994ec26318c7a6c0923307.jpg" alt="Imagem de Nossa Senhora da Paz de Medjugorje">
+             <h3>Nossa Senhora da Paz (1981 – Medjugorje, Bósnia-Herzegovina)</h3>
+             <p>Maria chamou à oração, jejum e conversão em uma pequena vila da Bósnia.</p>
+            <button class="btn-saiba">Saiba Mais</button>
+            <div class="historia">Desde 1981, seis jovens relatam aparições em Medjugorje. Nossa Senhora, apresentada como Rainha da Paz, pede oração do rosário, jejum, confissão e Eucaristia. As aparições ainda estão em estudo pela Igreja, mas milhões de fiéis peregrinam ao local.</div>
+          </article>
+          </li>
+            <li>
+  <article>
+    <img src="https://1.bp.blogspot.com/--i4dIUSs1AU/XdACdMC0LWI/AAAAAAAAmdM/HrprFCsNYqUti-sJC_aLqcGmL6btqPOpgCLcBGAsYHQ/s1600/20191116_110357.jpg" alt="Imagem de Nossa Senhora de Akita">
+    <h3>Nossa Senhora de Akita (1973 – Japão)</h3>
+    <p>Maria apareceu a uma religiosa no Japão com mensagens de oração e reparação.</p>
+    <button class="btn-saiba">Saiba Mais</button>
+    <div class="historia">Em 1973, a irmã Agnes Sasagawa, em Akita, recebeu mensagens de Nossa Senhora pedindo oração, penitência e reparação. A imagem da Virgem chorou mais de 100 vezes, confirmando os apelos à conversão e à unidade com a Igreja.</div>
+  </article>
+</li>
 
 
-<main>
-  <section class="container-cards">
+          </li>
+        </ul>
+      </section>
 
-    <!-- CARD APARIÇÕES -->
-    <div class="card">
-      <h2><i class="fas fa-praying-hands"></i> Aparições</h2>
-      <div class="card-content">
-        <article>
-          <img src="https://pbs.twimg.com/media/E59jPSuXoAIdxNl?format=jpg&name=4096x4096" alt="Nossa Senhora do Carmo">
-          <h3>Nossa Senhora do Carmo</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            Maria apareceu como Nossa Senhora do Carmo, celebrada com devoção em várias partes do mundo.
-          </div>
-        </article>
+      <!-- CARD SANTOS -->
+      <section class="card" aria-label="Santos Marianos">
+        <h2><i class="fas fa-church" aria-hidden="true"></i> Santos Marianos</h2>
+        <ul class="card-content">
+          <li>
+            <article>
+              <img src="https://tse2.mm.bing.net/th/id/OIP.0pBEPgYyWElVE_xMRsdSRgHaEK?pid=Api" alt="Imagem de São Luís Maria Grignion de Montfort">
+              <h3>São Luís Maria Grignion de Montfort</h3>
+              <p>Defensor da consagração total a Jesus por Maria.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Autor do clássico <em>Tratado da Verdadeira Devoção à Santíssima Virgem</em>.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://diocesedeformosa.com.br/wp-content/uploads/2020/02/Santo-Afonso-Maria-de-Lig%C3%B3rio.jpeg" alt="Imagem de Santo Afonso de Ligório">
+              <h3>Santo Afonso de Ligório</h3>
+              <p>Chamava Maria de “advogada dos pecadores”.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Chamava Maria de “advogada dos pecadores”.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://www.cnbb.org.br/wp-content/uploads/2020/05/JPII_Destaque.jpg" alt="Imagem de São João Paulo II">
+              <h3>São João Paulo II</h3>
+              <p>Viveu um profundo amor filial a Maria.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Papa mariano, com o lema <em>Totus Tuus</em>.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="http://photos1.blogger.com/blogger/4490/2035/1600/Kolbe_Maximilian_1-1.jpg" alt="Imagem de São Maximiliano Kolbe">
+              <h3>São Maximiliano Kolbe</h3>
+              <p>Ofereceu sua vida em Auschwitz por amor.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Mártir em Auschwitz e fundador da Milícia da Imaculada.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://twice.b-cdn.net/wp-content/uploads/2024/11/Carlo-Acutis.jpg" alt="Imagem de São Carlo Acutis">
+              <h3>São Carlo Acutis</h3>
+              <p>Usou a tecnologia para evangelizar com Maria.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Jovem beato, apaixonado pela Eucaristia e tecnologia.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://www.mundodoscatolicos.com.br/wp-content/uploads/2020/03/imagem-santa-teresinha.jpg" alt="Imagem de Santa Teresinha do Menino Jesus">
+              <h3>Santa Teresinha do Menino Jesus</h3>
+              <p>Pregou a “pequena via” da confiança em Deus.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Conhecida como a “Pequena Flor”, exemplo de simplicidade e confiança em Deus.</div>
+            </article>
+          </li>
+          <!-- Novos Santos -->
+          <li>
+            <article>
+              <img src="https://i.pinimg.com/originals/cd/9d/be/cd9dbe5d5a5343f4be6852628be4b34e.jpg" alt="Imagem de Santa Bernadette">
+              <h3>Santa Bernadette Soubirous</h3>
+              <p>Recebeu as mensagens de Lourdes com humildade.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Vidente de Lourdes, humilde e fiel mensageira de Maria.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="http://4.bp.blogspot.com/-L99FH47YACI/VXs75BQ_viI/AAAAAAABumM/kx_8q2_xLSw/s1600/padua2-3.jpg" alt="Imagem de Santo Antônio de Pádua">
+              <h3>Santo Antônio de Pádua</h3>
+              <p>Grande pregador franciscano e devoto de Maria.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Grande pregador franciscano e devoto de Nossa Senhora.</div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://tse3.mm.bing.net/th/id/OIP.0Q7zRDP86CnPljKgIdIm4QHaEK?pid=Api&P=0&h=180" alt="Imagem de São Domingos de Gusmão">
+              <h3>São Domingos de Gusmão</h3>
+              <p>Propagou a oração do Santo Rosário.</p>
+              <button class="btn-saiba">Saiba Mais</button>
+              <div class="historia">Fundador da Ordem Dominicana e propagador do Rosário.</div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </main>
 
-        <article>
-          <img src="https://www.sitecatolico.com.br/wp-content/uploads/2021/05/nossa_senhora_fatima-204014.jpeg" alt="Fátima">
-          <h3>Fátima (1917 - Portugal)</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            Nossa Senhora apareceu a três pastorinhos em Fátima, pedindo oração, penitência e paz.
-          </div>
-        </article>
+  <footer>
+    <p>&copy; 2025 - Corações para Maria</p>
+  </footer>
 
-        <article>
-          <img src="http://1.bp.blogspot.com/-AP092mNintY/VNgDJZT4jqI/AAAAAAABpEc/hAozYPuj600/s1600/Lourdes%2B-%2BSanta%2BBernadette%2BSoubirous%2B-%2Bapari%C3%A7%C3%A3o%2B(6).jpg" alt="Lourdes">
-          <h3>Lourdes (1858 - França)</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            Maria apareceu a Santa Bernadette, revelando uma fonte de água milagrosa.
-          </div>
-        </article>
-
-        <article>
-          <img src="https://www.miliciadaimaculada.org.br/source/files/c/16641/nossa-senhora-do-bom-conselho-039849_960-1200-0-0.jpg" alt="Nossa Senhora do Bom Conselho">
-          <h3>Nossa Senhora do Bom Conselho (Século XV - Albânia)</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            A devoção a Nossa Senhora do Bom Conselho surgiu no século XV, quando um ícone mariano foi milagrosamente transportado para Genazzano, na Itália. Desde então, tornou-se sinal de proteção e guia espiritual para os fiéis que buscam discernimento e orientação de Maria.
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <!-- CARD SANTOS -->
-    <div class="card">
-      <h2><i class="fas fa-church"></i> Santos Marianos</h2>
-      <div class="card-content">
-        <article>
-          <img src="https://tse2.mm.bing.net/th/id/OIP.0pBEPgYyWElVE_xMRsdSRgHaEK?pid=Api&P=0&h=180" alt="São Luís de Montfort">
-          <h3>São Luís Maria Grignion de Montfort</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            Autor do clássico <em>Tratado da Verdadeira Devoção à Santíssima Virgem</em>.
-          </div>
-        </article>
-
-        <article>
-          <img src="https://yata-apix-9da23243-671c-42a8-9014-41a94dafae05.s3-object.locaweb.com.br/4ecd64cf6c0b453e9765947a617a0333.jpg" alt="Santo Afonso de Ligório">
-          <h3>Santo Afonso de Ligório</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            Doutor da Igreja que chamava Maria de “advogada dos pecadores”.
-          </div>
-        </article>
-
-        <article>
-          <img src="https://www.cnbb.org.br/wp-content/uploads/2020/05/JPII_Destaque.jpg" alt="São João Paulo II">
-          <h3>São João Paulo II</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            Papa profundamente mariano, com o lema <em>Totus Tuus</em> (“Todo teu, Maria”).
-          </div>
-        </article>
-
-        <article>
-          <img src="http://cruzterrasanta.com.br/_global/_ssf/ssf.aspx?d=/_upload/significados_de_santos/&arquivo=20151113131829-sao-maximiliano-maria-kolbe-banner.jpg" alt="São Maximiliano Kolbe">
-          <h3>São Maximiliano Kolbe</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            Mártir em Auschwitz e fundador da Milícia da Imaculada.
-          </div>
-        </article>
-
-        <article>
-          <img src="https://twice.b-cdn.net/wp-content/uploads/2024/11/Carlo-Acutis.jpg" alt="São Carlo Acutis">
-          <h3>São Carlo Acutis</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            Jovem italiano conhecido por seu amor à Eucaristia e pela informática. Beatificado em 2020.
-          </div>
-        </article>
-
-        <article>
-          <img src="https://www.mundodoscatolicos.com.br/wp-content/uploads/2020/03/imagem-santa-teresinha-812x1024.jpg" alt="Santa Teresinha do Menino Jesus">
-          <h3>Santa Teresinha do Menino Jesus</h3>
-          <p>Pequena descrição...</p>
-          <button class="btn-saiba">Saiba Mais</button>
-          <div class="historia">
-            Freira carmelita conhecida como “Pequena Flor”, pela sua espiritualidade simples e profunda.
-          </div>
-        </article>
-      </div>
-    </div>
-
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2025 - Luz de Maria | Todos os direitos reservados</p>
-</footer>
-
-<!-- Chama o JavaScript -->
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
